@@ -66,5 +66,6 @@ def music_route():
     return jsonify(res)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 9000))
+    # HF Spaces 必须使用 7860 端口
+    port = int(os.environ.get("PORT", 7860))
     app.run(host="0.0.0.0", port=port)
